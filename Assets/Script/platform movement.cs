@@ -5,7 +5,7 @@ using UnityEngine;
 public class platformmovement : MonoBehaviour
 {
     public Transform [] Pose;
-    public float speed;
+    public float speed ;
     public int id;
     public int suma;
 

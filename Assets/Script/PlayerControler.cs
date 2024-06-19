@@ -13,6 +13,8 @@ public class PlayerControler : MonoBehaviour
     public Rigidbody2D rd;
     public float horinzontal;
     public float jumpForce;
+    Vector3 StartPo;
+
 
     public void Awake()
     {
@@ -21,7 +23,7 @@ public class PlayerControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartPo = this.transform.position;
     }
 
 
@@ -46,5 +48,9 @@ public class PlayerControler : MonoBehaviour
     private void FixedUpdate()
     {
         rd.velocity = new Vector2(horinzontal * speed, rd.velocity.y);
+    }
+    public void ResetPosition()
+    {
+        this.transform.position = StartPo;
     }
 }
